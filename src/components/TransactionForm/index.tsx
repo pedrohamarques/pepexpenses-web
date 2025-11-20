@@ -1,6 +1,6 @@
 import { Plus } from "lucide-react";
 import { useTransactionForm } from "./useTransactionForm";
-import { CATEGORIES } from "./types";
+import { CATEGORIES } from "./constants";
 import type { TransactionFormProps } from "./types";
 import { memo } from "react";
 

@@ -2,6 +2,7 @@ import { TrendingDown, TrendingUp, Trash2, Wallet } from "lucide-react";
 import { useTransactionList } from "./useTransactionList";
 import type { TransactionListProps } from "./types";
 import { memo } from "react";
+import Label from "../Label";
 
 export default memo(function TransactionList({
   transactions,
@@ -57,9 +58,7 @@ export default memo(function TransactionList({
                   <div>
                     <h3 className="font-medium text-gray-900">{item.title}</h3>
                     <div className="flex items-center gap-2 text-xs text-gray-500">
-                      <span className="bg-gray-100 px-2 py-0.5 rounded text-gray-600 font-medium">
-                        {item.category}
-                      </span>
+                      <Label category={item.category} />
                       <span>•</span>
                       <span>{formatDate(item.date)}</span>
                     </div>
